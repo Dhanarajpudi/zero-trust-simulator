@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Zero Trust Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>🔐 Zero Trust Cloud Security Dashboard</h1>
+
+  <div class="container">
+
+    <!-- LOGIN -->
+    <div class="card">
+      <h2>Login</h2>
+      <input id="username" placeholder="username" value="admin">
+      <input id="password" placeholder="password" value="admin123" type="password">
+      <button onclick="login()">Login</button>
+      <p id="token"></p>
+    </div>
+
+    <!-- ACCESS -->
+    <div class="card">
+      <h2>Access Resource</h2>
+      <button onclick="accessResource()">Access Admin API</button>
+      <p id="result"></p>
+    </div>
+
+    <!-- SIMULATION -->
+    <div class="card">
+      <h2>Attack Simulation</h2>
+      <button onclick="simulateGood()">Trusted IP</button>
+      <button onclick="simulateBad()">Untrusted IP</button>
+    </div>
+
+    <!-- LOGS -->
+    <div class="card">
+      <h2>Logs</h2>
+      <ul id="logs"></ul>
+    </div>
+
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
